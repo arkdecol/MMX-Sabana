@@ -225,3 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  pies: {fileID: 0}
+  jumpSpeed: 0
+  bullet: {fileID: 0}
