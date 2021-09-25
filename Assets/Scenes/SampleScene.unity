@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 1138417955}
   - component: {fileID: 1138417954}
   - component: {fileID: 1138417953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2687,10 +2687,63 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
+      propertyPath: pies
+      value: 
+      objectReference: {fileID: 3403679970080210347}
+    - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: -6869773987950756324, guid: 37a346388a2c49d4d9a09f4fd83e9b4f,
+        type: 3}
+    - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
+      propertyPath: fallingSprite
+      value: 
+      objectReference: {fileID: -4635356164159159118, guid: 37a346388a2c49d4d9a09f4fd83e9b4f,
+        type: 3}
+    - target: {fileID: 3403679970180561328, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561328, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561328, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561330, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561331, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.4301376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561331, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.0380676
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561331, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.017701626
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403679970180561331, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04346621
       objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
@@ -2700,12 +2753,12 @@ PrefabInstance:
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.91
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.76
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
@@ -2747,10 +2800,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8439546372034659656, guid: c2db23f513bc45c4891491078119335a,
+    - target: {fileID: 8307799433542000532, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ccb8c53e66391c646ba7ae506bd04270, type: 2}
+      propertyPath: m_Size.x
+      value: 1.4913838
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307799433542000532, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05642271
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2db23f513bc45c4891491078119335a, type: 3}
+--- !u!61 &3403679970080210347 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8307799433542000532, guid: c2db23f513bc45c4891491078119335a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3403679970080210346}
+  m_PrefabAsset: {fileID: 0}
