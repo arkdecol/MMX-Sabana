@@ -10,13 +10,15 @@ public class Megaman : MonoBehaviour
 
     Animator myAnimator;
     Rigidbody2D myBody;
+    BoxCollider2D myCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         myAnimator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
-        
+        myCollider = GetComponent<BoxCollider2D>();
+
     }
 
     // Update is called once per frame
@@ -24,6 +26,19 @@ public class Megaman : MonoBehaviour
     {
         Mover();
         Saltar();
+        Falling();
+        Fire();
+
+    }
+
+    void Fire()
+    {
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            myAnimator.SetLayerWeight(1, 1);
+        }
+        else
+            myAnimator.SetLayerWeight(1, 0);
 
     }
 
@@ -43,20 +58,38 @@ public class Megaman : MonoBehaviour
 
     void Saltar()
     {
-        bool isGrounded = pies.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        if (isGrounded)
+        if (isGrounded() && !myAnimator.GetBool("jumping"))
         {
             myAnimator.SetBool("falling", false);
+            myAnimator.SetBool("jumping", false);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 myAnimator.SetTrigger("takeof");
+                myAnimator.SetBool("jumping", true);
                 myBody.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
 
             }
         }
-        else
+    }
+
+    void Falling()
+    {
+        if (myBody.velocity.y < 0 && !myAnimator.GetBool("jumping"))
             myAnimator.SetBool("falling", true);
-        
+    }
+
+    bool isGrounded()
+    {
+        //return pies.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        RaycastHit2D myRaycast = Physics2D.Raycast(myCollider.bounds.center, Vector2.down, myCollider.bounds.extents.y + 0.2f,LayerMask.GetMask("Ground"));
+        Debug.DrawRay(myCollider.bounds.center, new Vector2(0, (myCollider.bounds.extents.y + 0.2f) * -1), Color.red);
+        return myRaycast.collider != null;
+    }
+
+    void AfterTakeOfEvent()
+    {
+        myAnimator.SetBool("jumping", false);
+        myAnimator.SetBool("falling", true);
     }
 
 }

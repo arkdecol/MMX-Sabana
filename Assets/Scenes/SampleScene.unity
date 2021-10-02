@@ -2693,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 3403679970080210347}
     - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
       propertyPath: jumpSpeed
-      value: 10
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 919645798, guid: c2db23f513bc45c4891491078119335a, type: 3}
       propertyPath: idleSprite
@@ -2705,6 +2705,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4635356164159159118, guid: 37a346388a2c49d4d9a09f4fd83e9b4f,
         type: 3}
+    - target: {fileID: 1468920070875035965, guid: c2db23f513bc45c4891491078119335a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561328, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_Mass
@@ -2758,7 +2763,7 @@ PrefabInstance:
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.92
+      value: 5.16
       objectReference: {fileID: 0}
     - target: {fileID: 3403679970180561334, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
@@ -2803,12 +2808,12 @@ PrefabInstance:
     - target: {fileID: 8307799433542000532, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.4913838
+      value: 0.8657726
       objectReference: {fileID: 0}
     - target: {fileID: 8307799433542000532, guid: c2db23f513bc45c4891491078119335a,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.05642271
+      value: -0.031398356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2db23f513bc45c4891491078119335a, type: 3}
