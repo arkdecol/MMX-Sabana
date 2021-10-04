@@ -19,6 +19,8 @@ public class Megaman : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
 
+        StartCoroutine(ShowTime());
+
     }
 
     // Update is called once per frame
@@ -29,6 +31,17 @@ public class Megaman : MonoBehaviour
         Falling();
         Fire();
 
+    }
+
+    IEnumerator ShowTime()
+    {
+        int count = 0;
+        while(true)
+        {
+            yield return new WaitForSeconds(1f);
+            count++;
+            Debug.Log("Tiempo: "+count);
+        }
     }
 
     void Fire()
