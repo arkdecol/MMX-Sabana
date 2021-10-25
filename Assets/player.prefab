@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2271638748436426825
 Transform:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05642265, y: -0.86246}
+  m_Offset: {x: -0.031398356, y: -0.86246}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2740527, y: 0.37129068}
+  m_Size: {x: 0.8657726, y: 0.37129068}
   m_EdgeRadius: 0
 --- !u!1 &3403679970180561330
 GameObject:
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3403679970180561331}
   - component: {fileID: 8439546372034659656}
   - component: {fileID: 919645798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,11 +161,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &3403679970180561331
 BoxCollider2D:
@@ -180,7 +180,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004031539, y: 0}
+  m_Offset: {x: 0.017701626, y: 0.04346621}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -191,7 +191,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5605361, y: 2.125}
+  m_Size: {x: 1.4301376, y: 2.0380676}
   m_EdgeRadius: 0
 --- !u!95 &8439546372034659656
 Animator:
@@ -225,3 +225,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  pies: {fileID: 8307799433542000532}
+  jumpSpeed: 18

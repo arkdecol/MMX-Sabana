@@ -19,7 +19,7 @@ public class Megaman : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
 
-        StartCoroutine(ShowTime());
+        //StartCoroutine(ShowTime());
 
     }
 
@@ -103,6 +103,11 @@ public class Megaman : MonoBehaviour
     {
         myAnimator.SetBool("jumping", false);
         myAnimator.SetBool("falling", true);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
     }
 
 }
